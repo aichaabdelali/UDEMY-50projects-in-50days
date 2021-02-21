@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(70deg, #3a0ca3, #4cc9f0);
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 6px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+
+.container a {
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container p {
+  text-align: center;
+}
+
+.form-control {
+  position: relative;
+  margin: 40px auto;
+  width: 300px;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fefefe;
+  padding: 15px 0;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.btn {
+  width: 100%;
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: none;
+  border-bottom-color: lightblue;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
