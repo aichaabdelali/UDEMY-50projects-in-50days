@@ -1,0 +1,54 @@
+/*import font*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tahoma";
+  background-color: rebeccapurple;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: #fff;
+  color: rebeccapurple;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: #fff;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
