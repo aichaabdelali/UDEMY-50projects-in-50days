@@ -6,14 +6,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #150050;
+  background-color: #f0f0f0;
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffff;
+  color: #222;
 }
 
 .user-form {
@@ -23,16 +23,16 @@ body {
 
 .user-form input {
   width: 100%;
-  background-color: #3f0071;
+  background-color: #f9f9f9;
   border: none;
   border-radius: 10px;
   font-family: inherit;
   font-size: 1rem;
-  color: #fff;
+  color: #222;
   margin-bottom: 2rem;
   padding: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+    0 5px 40px rgba(0, 0, 0, 0.1);
 }
 
 .user-form input:focus {
@@ -41,7 +41,7 @@ body {
 
 .card {
   max-width: 800px;
-  background-color: #3f0071;
+  background-color: #f9f9f9;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
@@ -52,14 +52,14 @@ body {
 
 .avatar {
   border-radius: 50%;
-  border: 10px solid #2a2a72;
+  border: 10px solid #eeeeee;
   height: 150px;
   width: 150px;
 }
 
 .user-info {
   margin-left: 2rem;
-  color: #eee;
+  color: #191a19;
 }
 
 .user-info ul {
@@ -82,8 +82,8 @@ body {
 
 .repo {
   text-decoration: none;
-  color: #fff;
-  background-color: #212a72;
+  color: #191a19;
+  background-color: #eeeeee;
   font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;
