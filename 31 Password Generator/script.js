@@ -14,6 +14,23 @@ const randomFunc = {
   symbol: getRandomSymbol,
 };
 
+clipboardEl.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const password = resultEl.innerText;
+
+  if (!password) {
+    return;
+  }
+
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+
+  alert("You now have a password!");
+});
+
 generateEl.addEventListener("click", () => {
   const length = +lengthEl.value;
   const hasLower = lowercaseEl.checked;
@@ -33,8 +50,27 @@ generateEl.addEventListener("click", () => {
 function generatePassword(lower, upper, symbol, number, length) {
   let generatedPassword = "";
   const typesCount = lower + upper + symbol + number;
-  console.log(typesCount);
-  //why the fuck is it 23
+  //need to be in the same order of the object above
+
+  const typesArr = [{ lower }, { upper }, { symbol }, { number }].filter(
+    (item) => Object.values(item)[0]
+  ); //filter the items with false as value a.k.a the unckecked ones
+
+  if (typesCount === 0) {
+    return "";
+  }
+
+  for (let i = 0; i < length; i += typesCount) {
+    typesArr.forEach((type) => {
+      const funcName = Object.keys(type)[0];
+      generatedPassword += randomFunc[funcName]();
+      //make it random
+    });
+  }
+
+  const finalPassword = generatedPassword.slice(0, length);
+
+  return finalPassword;
 }
 
 function getRandomLower() {
